@@ -2,7 +2,9 @@ import express from 'express';
 import notesController from '../controllers/notesController.js';
 const router = express.Router();
 
-router.get("/",notesController.getNotes);
+router.get("/",notesController.getAllNotes);
+
+router.get("/:id",notesController.getOneNote);
 
 router.post("/",notesController.createNote);
 
