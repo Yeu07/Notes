@@ -5,7 +5,7 @@ import { connectDB } from './config/db.js';
 async function main(){
     try {
         await connectDB();
-        app.listen(5001, () => {
+        app.listen(process.env.PORT || 5000, () => {
             console.log("Activado")
         })
     } catch (error) {
