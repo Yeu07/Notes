@@ -1,15 +1,18 @@
-import express from 'express';
-import notesRoutes from './routes/notesRoutes.js'
-import type { Request, Response } from "express";
+import 'dotenv/config'
+import app from './app.js'
+import { connectDB } from './config/db.js';
 
+async function main(){
+    try {
+        await connectDB();
+        app.listen(5001, () => {
+            console.log("Activado")
+        })
+    } catch (error) {
+        if(error instanceof Error){
+            console.log(error.message)
+        }
+    }
+}
 
-const app = express();
-
-app.use("/notes",notesRoutes)
-app.use(express.json())
-
-
-app.listen(5001, () => {
-    console.log("Server Started");
-});
-
+main();
