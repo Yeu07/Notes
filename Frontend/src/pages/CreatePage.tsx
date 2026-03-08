@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router"; // Usamos useNavigate para volver al inicio
+import { Link, useNavigate } from "react-router";
 import { ArrowLeftIcon, SaveIcon, Loader2Icon } from "lucide-react";
-import api from "../config/api"; // Tu instancia de axios configurada en el puerto 5001
+import api from "../config/api"; 
 import { isAxiosError } from "axios";
 import toast from "react-hot-toast";
 
