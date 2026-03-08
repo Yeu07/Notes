@@ -6,8 +6,7 @@ import NoteDetailPage from "./pages/NoteDetailPage"
 
 function App() {
   return (
-    <div>
-        
+    <div data-theme="sunset">
         <Routes>
             <Route path="/" element={<HomePage/>}></Route>
             <Route path="/create" element={<CreatePage/>}></Route>
