@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { API_URL } from './constant';
 
+const BASE_URL = import.meta.env.VITE_MODE === "development" ? API_URL : "/"
+
 const api = axios.create({
-    baseURL: API_URL,
+    baseURL: BASE_URL,
     timeout: 5000,
 });
 
